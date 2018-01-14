@@ -1,0 +1,19 @@
+spring:
+  profiles.include: discovery
+  cloud.zookeeper:
+    discovery.enabled: true
+    enabled: true
+    connectString: defaultZkHost:2181/${app.tenant}
+  application.name: reda
+
+app:
+  minPort: 8080
+  maxPort: 8080
+  tenant: a06-fr
+  perimeter: raiden
+
+spring.datasource:
+  url: jdbc:sqlserver://a08sql-backweb.cdbdx.biz\\backweb:2117;databaseName=CDISCOUNT_CLIENTS
+  username: Testeur
+  password: Azerty123
+  driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
